@@ -1,0 +1,1130 @@
+/* =====================================================
+        FUTURE DEVELOPER PORTFOLIO
+        STYLE.CSS
+===================================================== */
+
+/* ==========================
+        GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+        ROOT COLORS
+========================== */
+
+:root {
+
+    --primary: #0d6efd;
+    --secondary: #6610f2;
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+
+    --dark: #212529;
+    --light: #f8f9fa;
+
+    --text: #343a40;
+
+    --white: #ffffff;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+}
+
+/* ==========================
+        RESET
+========================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--text);
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+
+    line-height: 1.7;
+
+}
+
+/* ==========================
+        DARK MODE
+========================== */
+
+body.dark {
+
+    background: #121212;
+
+    color: #f2f2f2;
+
+}
+
+body.dark section {
+
+    background: #121212 !important;
+
+    color: white;
+
+}
+
+body.dark .card {
+
+    background: #1d1d1d;
+
+    color: white;
+
+}
+
+body.dark .navbar {
+
+    background: #000 !important;
+
+}
+
+/* ==========================
+        NAVIGATION
+========================== */
+
+.navbar {
+
+    padding: 15px 0;
+
+    transition: .4s;
+
+}
+
+.navbar-brand {
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+}
+
+.nav-link {
+
+    margin-left: 18px;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+.nav-link:hover {
+
+    color: #0dcaf0 !important;
+
+}
+
+.navbar.scrolled {
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+}
+
+/* ==========================
+        HERO SECTION
+========================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(rgba(0, 0, 0, .75),
+
+            rgba(0, 0, 0, .75)),
+
+        url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: white;
+
+}
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    font-weight: 800;
+
+}
+
+.hero h3 {
+
+    height: 45px;
+
+    font-weight: 600;
+
+}
+
+.hero p {
+
+    font-size: 1.15rem;
+
+    max-width: 700px;
+
+}
+
+.hero-image {
+
+    max-width: 400px;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow: var(--shadow);
+
+    animation: float 4s ease-in-out infinite;
+
+}
+
+/* ==========================
+        FLOAT ANIMATION
+========================== */
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-18px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================
+        BUTTONS
+========================== */
+
+.btn {
+
+    border-radius: 50px;
+
+    padding: 12px 30px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+
+}
+
+/* ==========================
+        SOCIAL ICONS
+========================== */
+
+.social-icons a {
+
+    font-size: 30px;
+
+    margin-right: 20px;
+
+    color: white;
+
+    transition: .3s;
+
+    text-decoration: none;
+
+}
+
+.social-icons a:hover {
+
+    color: #0dcaf0;
+
+    transform: translateY(-5px);
+
+}
+
+/* ==========================
+        SECTION TITLE
+========================== */
+
+section {
+
+    padding: 100px 0;
+
+}
+
+.title-line {
+
+    width: 90px;
+
+    height: 5px;
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+    margin-top: 10px;
+
+}
+
+/* ==========================
+        ABOUT IMAGE
+========================== */
+
+.about-image {
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ==========================
+        LIST GROUP
+========================== */
+
+.list-group-item {
+
+    border: none;
+
+    padding: 12px;
+
+}
+
+/* ==========================
+        CARD
+========================== */
+
+.card {
+
+    border: none;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.card img {
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+/* =====================================================
+                EDUCATION TIMELINE
+===================================================== */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.timeline::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+
+    background: var(--primary);
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    margin-left: -2px;
+
+}
+
+.timeline-item {
+
+    padding: 20px 40px;
+
+    position: relative;
+
+    width: 50%;
+
+}
+
+.timeline-item:nth-child(odd) {
+
+    left: 0;
+
+}
+
+.timeline-item:nth-child(even) {
+
+    left: 50%;
+
+}
+
+.timeline-icon {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: -22px;
+
+    width: 45px;
+
+    height: 45px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    box-shadow: var(--shadow);
+
+    z-index: 2;
+
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+
+    left: -22px;
+
+}
+
+.timeline-content {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+body.dark .timeline-content {
+
+    background: #1d1d1d;
+
+}
+
+/* =====================================================
+                PROGRESS BARS
+===================================================== */
+
+.progress {
+
+    height: 28px;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    background: #e9ecef;
+
+    margin-bottom: 25px;
+
+}
+
+.progress-bar {
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* =====================================================
+                PROJECT CARDS
+===================================================== */
+
+#projects .card {
+
+    height: 100%;
+
+    transition: .35s;
+
+}
+
+#projects .card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+#projects .card img {
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+#projects h4 {
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+#projects h6 {
+
+    margin-top: 18px;
+
+    font-weight: 600;
+
+    color: var(--primary);
+
+}
+
+#projects ul {
+
+    padding-left: 18px;
+
+}
+
+#projects li {
+
+    margin-bottom: 8px;
+
+}
+
+/* =====================================================
+                BADGES
+===================================================== */
+
+.badge {
+
+    padding: 8px 14px;
+
+    font-size: .85rem;
+
+    margin: 3px;
+
+    border-radius: 30px;
+
+}
+
+/* =====================================================
+            PROJECT BUTTONS
+===================================================== */
+
+#projects .btn {
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+/* =====================================================
+                AWARD CARDS
+===================================================== */
+
+#awards .card {
+
+    transition: .35s;
+
+}
+
+#awards .card:hover {
+
+    transform: scale(1.03);
+
+}
+
+#awards img {
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+/* =====================================================
+            COUNTER BOXES
+===================================================== */
+
+.counter-box {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s;
+
+}
+
+.counter-box:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.counter {
+
+    font-size: 60px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+body.dark .counter-box {
+
+    background: #1f1f1f;
+
+}
+
+/* =====================================================
+            VOLUNTEER SECTION
+===================================================== */
+
+#volunteer .card {
+
+    padding: 10px;
+
+}
+
+#volunteer ul {
+
+    padding-left: 18px;
+
+}
+
+#volunteer li {
+
+    margin-bottom: 10px;
+
+}
+
+/* =====================================================
+        LEADERSHIP SECTION
+===================================================== */
+
+.list-group-item {
+
+    transition: .3s;
+
+}
+
+.list-group-item:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+    transform: translateX(10px);
+
+}
+/* =====================================================
+                CONTACT SECTION
+===================================================== */
+
+#contact {
+
+    background: #f8f9fa;
+
+}
+
+body.dark #contact {
+
+    background: #181818 !important;
+
+}
+
+#contact .card {
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+#contact h3 {
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+#contact p {
+
+    margin-bottom: 15px;
+
+}
+
+#contact a {
+
+    text-decoration: none;
+
+    color: var(--primary);
+
+}
+
+#contact a:hover {
+
+    text-decoration: underline;
+
+}
+
+.form-control {
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    transition: .3s;
+
+}
+
+.form-control:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 10px rgba(13, 110, 253, .25);
+
+}
+
+textarea {
+
+    resize: none;
+
+}
+
+body.dark .form-control {
+
+    background: #2a2a2a;
+
+    color: white;
+
+    border: 1px solid #444;
+
+}
+
+body.dark .form-control::placeholder {
+
+    color: #ccc;
+
+}
+
+/* =====================================================
+                BACK TO TOP BUTTON
+===================================================== */
+
+#backToTop {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    display: none;
+
+    z-index: 9999;
+
+    box-shadow: var(--shadow);
+
+}
+
+/* =====================================================
+                    FOOTER
+===================================================== */
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+}
+
+footer h3,
+footer h5 {
+
+    font-weight: 700;
+
+}
+
+footer a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+footer a:hover {
+
+    color: #0dcaf0;
+
+}
+
+footer i {
+
+    transition: .3s;
+
+}
+
+footer i:hover {
+
+    transform: translateY(-5px);
+
+    color: #0dcaf0;
+
+}
+
+/* =====================================================
+            SCROLL REVEAL ANIMATION
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* =====================================================
+                IMAGE HOVER
+===================================================== */
+
+img {
+
+    transition: .4s;
+
+}
+
+img:hover {
+
+    transform: scale(1.02);
+
+}
+
+/* =====================================================
+                DARK MODE
+===================================================== */
+
+body.dark {
+
+    background: #121212;
+
+    color: #eee;
+
+}
+
+body.dark .navbar {
+
+    background: #000 !important;
+
+}
+
+body.dark footer {
+
+    background: #000;
+
+}
+
+body.dark .timeline-content,
+
+body.dark .counter-box,
+
+body.dark .card {
+
+    background: #1f1f1f;
+
+    color: white;
+
+}
+
+body.dark .list-group-item {
+
+    background: #1f1f1f;
+
+    color: white;
+
+    border-color: #333;
+
+}
+
+body.dark .badge {
+
+    color: white;
+
+}
+
+/* =====================================================
+            MOBILE RESPONSIVE
+===================================================== */
+
+@media(max-width:991px) {
+
+    .hero {
+
+        text-align: center;
+
+        padding-top: 100px;
+
+    }
+
+    .hero-image {
+
+        margin-top: 40px;
+
+        max-width: 280px;
+
+    }
+
+    .timeline::after {
+
+        left: 25px;
+
+    }
+
+    .timeline-item {
+
+        width: 100%;
+
+        left: 0 !important;
+
+        padding-left: 70px;
+
+        padding-right: 20px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .timeline-icon {
+
+        left: 5px !important;
+
+        right: auto;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .hero h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+    .hero h3 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .counter {
+
+        font-size: 42px;
+
+    }
+
+    .nav-link {
+
+        margin-left: 0;
+
+        padding: 10px;
+
+    }
+
+    section {
+
+        padding: 70px 0;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .hero h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .hero-image {
+
+        max-width: 220px;
+
+    }
+
+    .title-line {
+
+        width: 70px;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+        margin-bottom: 10px;
+
+    }
+
+    .social-icons {
+
+        margin-top: 25px;
+
+    }
+
+}
+
+/* =====================================================
+                LOADING ANIMATION
+===================================================== */
+
+.fade-in {
+
+    animation: fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+            END OF STYLE.CSS
+===================================================== */
